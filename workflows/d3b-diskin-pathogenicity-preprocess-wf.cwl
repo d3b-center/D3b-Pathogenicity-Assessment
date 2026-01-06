@@ -121,7 +121,7 @@ inputs:
   output_basename: {type: string, doc: "String that will be used in the output filenames. Be sure to be consistent with this as InterVar
       will use this too"}
   annovar_db: {type: File, doc: "Annovar Database with at minimum required resources to InterVar", "sbg:suggestedValue": {class: File,
-      path: 648b2bf575423d2473af6ed8, name: annovar_humandb_hg38_intervar.tgz}}
+      path: 695d3c4c5ddfaa35efd4d025, name: annovar_humandb_hg38_intervar.tgz}}
   annovar_db_str: {type: 'string?', doc: "Name of dir created when annovar db is un-tarred", default: "annovar_humandb_hg38_intervar"}
   annovar_protocol: {type: 'string?', doc: "csv string of databases within `annovar_db` cache to run", default: "refGene,esp6500siv2_all,1000g2015aug_all,avsnp147,dbnsfp42a,clinvar_20210501,gnomad_genome,dbscsnv11,rmsk,ensGene,knownGene"}
   annovar_operation: {type: 'string?', doc: "csv string of how to treat each listed protocol", default: "g,f,f,f,f,f,f,f,r,g,g"}
@@ -139,11 +139,11 @@ inputs:
   # bcftools annotate if more to do
   bcftools_annot_columns: {type: 'string?', doc: "csv string of columns from annotation to port into the input vcf", default: "INFO/ALLELEID,INFO/CLNDN,INFO/CLNDNINCL,INFO/CLNDISDB,INFO/CLNDISDBINCL,INFO/CLNHGVS,INFO/CLNREVSTAT,INFO/CLNSIG,INFO/CLNSIGCONF,INFO/CLNSIGINCL,INFO/CLNVC,INFO/CLNVCSO,INFO/CLNVI"}
   annotation_vcf: {type: 'File?', secondaryFiles: ['.tbi'], doc: "additional bgzipped annotation vcf file"}
-  intervar_db: {type: File, doc: "InterVar Database from git repo + mim_genes.txt", "sbg:suggestedValue": {class: File, path: 648b2bf575423d2473af6ed6,
+  intervar_db: {type: File, doc: "InterVar Database from git repo + mim_genes.txt", "sbg:suggestedValue": {class: File, path: 695d3c4c5ddfaa35efd4d023,
       name: intervardb_2021-08.tar.gz}}
   intervar_db_str: {type: 'string?', doc: "Name of dir created when intervar db is un-tarred", default: "intervardb"}
   intervar_ram: {type: 'int?', doc: "Min ram needed for task in GB", default: 32}
-  autopvs1_db: {type: File, doc: "git repo files plus a user-provided fasta reference", "sbg:suggestedValue": {class: File, path: 648b2bf575423d2473af6ed7,
+  autopvs1_db: {type: File, doc: "git repo files plus a user-provided fasta reference", "sbg:suggestedValue": {class: File, path: 695d3c4c5ddfaa35efd4d02d,
       name: autoPVS1_references_sym_updated.tar.gz}}
   autopvs1_db_str: {type: 'string?', doc: "Name of dir created when annovar db is un-tarred", default: "data"}
 outputs:
@@ -222,7 +222,7 @@ hints:
 - class: sbg:maxNumberOfParallelInstances
   value: 2
 "sbg:links":
-- id: 'https://github.com/d3b-center/D3b-Pathogenicity-Preprocessing/releases/tag/v1.1.0'
+- id: 'https://github.com/d3b-center/D3b-Pathogenicity-Preprocessing/releases/tag/v1.1.1'
   label: github-release
 sbg:license: Apache License 2.0
 sbg:publisher: KFDRC
