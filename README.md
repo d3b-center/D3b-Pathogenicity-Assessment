@@ -1,7 +1,7 @@
 # Pathogenicity Preprocessing Workflow
 This repo makes use of the git submodule feature for ease of code maintenance. To properly retrieve all relevant code:
 ```sh
-git clone  https://github.com/childrens-bti/D3b-Pathogenicity-Preprocessing-CNH
+git clone https://github.com/d3b-center/D3b-Pathogenicity-Preprocessing
 git submodule init
 git submodule update
 ```
