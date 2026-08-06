@@ -10,7 +10,7 @@ requirements:
     ramMin: $(inputs.ram * 1000)
     coresMin: $(inputs.cpu)
   - class: DockerRequirement
-    dockerPull: 'pgc-images.sbgenomics.com/diskin-lab/autogvp:v1.0.3'
+    dockerPull: 'pgc-images.sbgenomics.com/diskin-lab/autogvp:v2.0.1'
 
 baseCommand: []
 arguments:
@@ -34,5 +34,5 @@ inputs:
 outputs:
   filtered_vcf: { type: File, outputBinding: { glob: '*.filtered.vcf' }}
   filtered_multianno: { type: File, outputBinding: { glob: '*_multianno_filtered.txt' }}
-  filtered_autopsv: { type: File, outputBinding: { glob: '*_autopvs1_filtered.tsv' }}
+  filtered_autopvs1: { type: File, outputBinding: { glob: '*_autopvs1_filtered.tsv' }}
   filtered_intervar: { type: File, outputBinding: { glob: '*_intervar_filtered.txt' }}

@@ -1,7 +1,7 @@
 # Pathogenicity Preprocessing Workflow
-To run, please see the [CAVATICA app](https://cavatica.sbgenomics.com/public/apps/cavatica/apps-publisher/d3b-diskin-pathogenicity-preprocess-wf). Each version should correspond with a git release. This repo makes use of the git submodule feature for ease of code maintenance. To properly retrieve all relevant code:
+This repo makes use of the git submodule feature for ease of code maintenance. To properly retrieve all relevant code:
 ```sh
-git clone  https://github.com/d3b-center/D3b-Pathogenicity-Preprocessing
+git clone https://github.com/d3b-center/D3b-Pathogenicity-Preprocessing
 git submodule init
 git submodule update
 ```
