@@ -74,7 +74,7 @@ inputs:
   sample_id: {type: 'string', doc: "Input sample bioassay id."}
   selected_clinvar_submissions: {type: 'File?', doc: "ClinVar variant file with conflicts resolved. If not provided, this file will
       be generated in the workflow", "sbg:suggestedValue": {class: File,
-      path: 6a322ff1b729272b1d1bbea4, name: resolved-clinvar-2026-06-cancer-latest.tsv}}
+      path: 6a834cde08505474f85ea6f1, name: resolved-clinvar-2026-06-cancer-latest.tsv}}
   variant_summary_file: {type: 'File?', doc: "ClinVar variant summary file", "sbg:suggestedValue": {class: File,
       path: 6a322ff1b729272b1d1bbe9b, name: variant_summary_2026-06.txt.gz}}
   clinvar_hgvs4_file: {type: 'File?', doc: "ClinVar hgvs4 file with amino acid changes", "sbg:suggestedValue": {class: File,
@@ -161,7 +161,7 @@ hints:
 - class: sbg:maxNumberOfParallelInstances
   value: 2
 "sbg:links":
-- id: 'https://github.com/d3b-center/D3b-Pathogenicity-Assessment/releases/tag/v2.0.0'
+- id: 'https://github.com/d3b-center/D3b-Pathogenicity-Assessment/releases/tag/v2.0.1'
   label: github-release
 sbg:license: Apache License 2.0
 sbg:publisher: KFDRC
