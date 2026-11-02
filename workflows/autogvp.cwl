@@ -56,7 +56,7 @@ doc: |
 
   ## Resources
 
-  Dockerfile: pgc-images.sbgenomics.com/diskin-lab/autogvp:v2.0.2
+  Dockerfile: pgc-images.sbgenomics.com/diskin-lab/autogvp:v2.0.3
   AutoGVP Paper: https://doi.org/10.1093/bioinformatics/btae114
   AutoGVP GitHub: https://github.com/diskin-lab-chop/AutoGVP
 requirements:
@@ -161,7 +161,7 @@ hints:
 - class: sbg:maxNumberOfParallelInstances
   value: 2
 "sbg:links":
-- id: 'https://github.com/d3b-center/D3b-Pathogenicity-Assessment/releases/tag/v2.0.2'
+- id: 'https://github.com/d3b-center/D3b-Pathogenicity-Assessment/releases/tag/v2.0.3'
   label: github-release
 sbg:license: Apache License 2.0
 sbg:publisher: KFDRC
