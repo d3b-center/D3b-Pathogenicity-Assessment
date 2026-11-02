@@ -31,10 +31,13 @@ doc: |
   output_basename: String to use as the basename for stored outputs
   selected_clinvar_submissions: ClinVar variant file with conflicts resolved. If not provided, this file will be generated in the workflow
   variant_summary_file: ClinVar variant summary file
+  clinvar_hgvs4_file: ClinVar hgvs4 file with amino acid changes. Required; used to update InterVar PS1/PM5 evidence
   submission_summary_file: ClinVar submission summary file
   concept_ids: File containing list of conceptIDs to prioritize submissions for ClinVar variant conflict resolution
   conflict_res: How to resolve conflicts associated with conceptIDs: latest or most_severe
   ```
+
+  `clinvar_hgvs4_file` is ClinVar's [hgvs4variation.txt.gz](https://ftp.ncbi.nlm.nih.gov/pub/clinvar/tab_delimited/hgvs4variation.txt.gz).
 
   The following files can be obtained from the [AutoGVP GitHub data directory](https://github.com/diskin-lab-chop/AutoGVP/tree/main/data):
   - `autopvs1_file`
@@ -77,7 +80,7 @@ inputs:
       path: 6a834cde08505474f85ea6f1, name: resolved-clinvar-2026-06-cancer-latest.tsv}}
   variant_summary_file: {type: 'File?', doc: "ClinVar variant summary file", "sbg:suggestedValue": {class: File,
       path: 6a322ff1b729272b1d1bbe9b, name: variant_summary_2026-06.txt.gz}}
-  clinvar_hgvs4_file: {type: 'File?', doc: "ClinVar hgvs4 file with amino acid changes", "sbg:suggestedValue": {class: File,
+  clinvar_hgvs4_file: {type: 'File', doc: "ClinVar hgvs4 file with amino acid changes", "sbg:suggestedValue": {class: File,
       path: 6a68726f08505474f85a109b, name: hgvs4variation-2026-07.txt.gz}}
   submission_summary_file: {type: 'File?', doc: "ClinVar submission summary file", "sbg:suggestedValue": {class: File,
       path: 6a322ff1b729272b1d1bbea2, name: submission_summary_2026-06.txt.gz}}
