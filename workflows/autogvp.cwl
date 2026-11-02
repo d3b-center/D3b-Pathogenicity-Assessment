@@ -122,6 +122,7 @@ steps:
         source: [selected_clinvar_submissions, select_clinvar_subs/clinvar_submissions]
         pickValue: first_non_null
       clinvar_hgvs4_file: clinvar_hgvs4_file
+      vcf_file: filter_vcf/filtered_vcf
     out: [updated_intervar]
   annotate:
     run: ../tools/autogvp_annotate_cavatica.cwl

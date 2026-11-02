@@ -23,5 +23,6 @@ inputs:
   intervar_file: { type: 'File', inputBinding: { position: 2, prefix: "--intervar_file" }, doc: "intervar results file" }
   clinvar_file: { type: 'File', inputBinding: { position: 2, prefix: "--clinvar_file" }, doc: "ClinVar resolved clinical significance file (format: resolved-clinvar-interpretations.tsv)" }
   clinvar_hgvs4_file: { type: 'File', inputBinding: { position: 2, prefix: "--clinvar_hgvs4_file" }, doc: "ClinVar hgvs4 file with amino acid changes" }
+  vcf_file: { type: 'File', inputBinding: { position: 2, prefix: "--vcf_file" }, doc: "VEP-annotated VCF; RefSeq transcript HGVSp from the CSQ field is used for PS1/PM5 matching" }
 outputs:
   updated_intervar: { type: File, outputBinding: { glob: '*updated*' }}
