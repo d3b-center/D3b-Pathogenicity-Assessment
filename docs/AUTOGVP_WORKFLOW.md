@@ -28,10 +28,13 @@ output_colnames: File with column name information
 output_basename: String to use as the basename for stored outputs
 selected_clinvar_submissions: ClinVar variant file with conflicts resolved. If not provided, this file will be generated in the workflow
 variant_summary_file: ClinVar variant summary file
+clinvar_hgvs4_file: ClinVar hgvs4 file with amino acid changes. Required; used to update InterVar PS1/PM5 evidence
 submission_summary_file: ClinVar submission summary file
 concept_ids: File containing list of conceptIDs to prioritize submissions for ClinVar variant conflict resolution
 conflict_res: How to resolve conflicts associated with conceptIDs: latest or most_severe
 ```
+
+`clinvar_hgvs4_file` is ClinVar's [hgvs4variation.txt.gz](https://ftp.ncbi.nlm.nih.gov/pub/clinvar/tab_delimited/hgvs4variation.txt.gz).
 
 The following files can be obtained from the [AutoGVP GitHub data directory](https://github.com/diskin-lab-chop/AutoGVP/tree/main/data):
 - `autopsv1_file`
@@ -54,6 +57,6 @@ Additionally, AutoGVP provides [a bash script](https://github.com/diskin-lab-cho
 
 ## Resources
 
-Dockerfile: pgc-images.sbgenomics.com/diskin-lab/autogvp:v1.0.3
+Dockerfile: pgc-images.sbgenomics.com/diskin-lab/autogvp:v2.0.3
 AutoGVP Paper: https://doi.org/10.1093/bioinformatics/btae114
 AutoGVP GitHub: https://github.com/diskin-lab-chop/AutoGVP

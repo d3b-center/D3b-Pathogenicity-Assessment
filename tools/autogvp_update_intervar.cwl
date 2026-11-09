@@ -2,7 +2,7 @@ cwlVersion: v1.2
 class: CommandLineTool
 id: autogvp_filter_vcf
 doc: |
-  Tool for the 01-filter_vcf script from AutoGVP
+  Tool for the update_intervar.R script from AutoGVP
 requirements:
   - class: ShellCommandRequirement
   - class: InlineJavascriptRequirement
@@ -10,7 +10,7 @@ requirements:
     ramMin: $(inputs.ram * 1000)
     coresMin: $(inputs.cpu)
   - class: DockerRequirement
-    dockerPull: 'pgc-images.sbgenomics.com/diskin-lab/autogvp:v2.0.2'
+    dockerPull: 'pgc-images.sbgenomics.com/diskin-lab/autogvp:v2.0.3'
 
 baseCommand: []
 arguments:
@@ -23,5 +23,8 @@ inputs:
   intervar_file: { type: 'File', inputBinding: { position: 2, prefix: "--intervar_file" }, doc: "intervar results file" }
   clinvar_file: { type: 'File', inputBinding: { position: 2, prefix: "--clinvar_file" }, doc: "ClinVar resolved clinical significance file (format: resolved-clinvar-interpretations.tsv)" }
   clinvar_hgvs4_file: { type: 'File', inputBinding: { position: 2, prefix: "--clinvar_hgvs4_file" }, doc: "ClinVar hgvs4 file with amino acid changes" }
+  vcf_file: { type: 'File', inputBinding: { position: 2, prefix: "--vcf_file" }, doc: "VEP-annotated VCF; RefSeq transcript HGVSp from the CSQ field is used for PS1/PM5 matching" }
+  cpu: { type: 'int?', default: 1, doc: "CPUs to allocate to this task" }
+  ram: { type: 'int?', default: 2, doc: "GB of RAM to allocate to this task" }
 outputs:
   updated_intervar: { type: File, outputBinding: { glob: '*updated*' }}
